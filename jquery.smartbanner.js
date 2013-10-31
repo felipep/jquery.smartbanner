@@ -107,7 +107,8 @@
         }
         
       , show: function(callback) {
-            $('#smartbanner').stop().animate({top:0},this.options.speedIn).addClass('shown')
+            //@Wege: remove top:0 to avoid false position of the banner
+            $('#smartbanner').stop().animate({},this.options.speedIn).addClass('shown')
             $('html').animate({marginTop:this.origHtmlMargin+(this.bannerHeight*this.scale)},this.options.speedIn,'swing',callback)
         }
         
